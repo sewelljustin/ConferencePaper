@@ -5,16 +5,26 @@
 
 \title{Indoor Localization for Mobile Devices Using Bluetooth Low Energy Beacons and Wi-Fi Access Points}
 
-\author{\IEEEauthorblockN{Justin L. Sewell}
-\IEEEauthorblockA{School of Electrical and\\Computer Engineering\\
-Georgia Institute of Technology\\
-Atlanta, Georgia 30332--0250\\
-Email: http://www.michaelshell.org/contact.html}
+\author{
+\IEEEauthorblockN{Alfredo J. Perez, Justin L. Sewell}
+\IEEEauthorblockA{TSYS School of Computer Science\\
+Columbus State University\\
+Columbus, GA 31907\\
+Email: justinsewell@mail.usf.edu\\
+Email: perez\_alfredo@columbusstate.edu}
 \and
 \IEEEauthorblockN{Juan C. Morales}
-\IEEEauthorblockA{Twentieth Century Fox\\
-Springfield, USA\\
-Email: homer@thesimpsons.com}}
+\IEEEauthorblockA{Dept. of Computer Science\\
+University of Puerto Rico in Bayamon\\
+Bayamon, Puerto Rico 00959\\
+Email: juan.morales5@upr.edu}
+\and
+\IEEEauthorblockN{Miguel Labrador}
+\IEEEauthorblockA{Dept. of Computer Science\\
+and Engineering\\
+University of South Florida\\
+Tampa, FL 33620\\
+Email: mlabrador@usf.edu}}
 
 \maketitle
 
@@ -45,11 +55,11 @@ The rest of this paper is organized as follows: Section II describes current ind
 \section{Related Work}
 Wi-Fi based indoor localization has been a widely researched topic due to its availability, and the recent surge of BLE beacons has also spurred an interest in applying previous methods used in Wi-Fi and other technologies to the advantages of BLE. Most of these approaches use the RSSI of the wireless signal to approximate the location of the device.
 
-Wi-Fi Fingerprinting is a highly popular technique in indoor localization \cite{chan2012indoor,navarro2010wi}. This technique focuses on  building a signal strength map of a given area by creating reference points around it. In each of these reference points, RSSI values are gathered for each available access point found. These values are stored in a database and identified by the reference point in which they were gathered. Localization is achieved by obtaining the signal strengths of all available AP’s at the time of a scan and matching the current values to the ones in the pre-existing database. This method has many advantages due to the system being fully based on previously installed Wi-Fi APs and not inccuring any extra hardware costs. Fingerprinting also eliminates the need of using noisy wireless signals for localization. In addition, algorithms such as Nearest Neighbor or the Hidden Markov Model can be applied to the current scans to improve accuracy. However, fingerprinting also has it’s shortcomings such as long scan times and similar fingerprints.
+Wi-Fi Fingerprinting is a highly popular technique in indoor localization \cite{chan2012indoor,navarro2010wi}. This technique focuses on  building a signal strength map of a given area by creating reference points around it. In each of these reference points, RSSI values are gathered for each available access point found. These values are stored in a database and identified by the reference point in which they were gathered. Localization is achieved by obtaining the signal strengths of all available AP’s at the time of a scan and matching the current values to the ones in the pre-existing database. This method has many advantages due to the system being fully based on previously installed Wi-Fi APs and not inccuring any extra hardware costs. Fingerprinting also eliminates the need of using noisy wireless signals for distance approximation. In addition, algorithms such as Nearest Neighbor or the Hidden Markov Model can be applied to the current scans to improve accuracy. However, fingerprinting also has it’s shortcomings such as long scan times and similar fingerprints.
 
 An improvement on  Wi-Fi fingerprinting is examined in \cite{wu2016improved}.  A Particle Filter (PF) is used to fuse location estimations provided by a dead reckoning model and Wi-Fi fingerprinting to provide a higher localization accuracy. The PF is initialized using a Random Sample Consensus model which filters out the outliers of the Wi-Fi fingerprinting algorithm by comparing the estimations to the dead reckoning model, thus reducing the chance of the PF initializing in the wrong location. For the fingerprinting, two methods are examined. The first is a probabilistic approach using a Gaussian distribution to approximate the distribution of RSSI values of an AP. The second approach is deterministic using a Support Vector Machine (SVM) for pattern recognition of online readings to the database values.  The reported accuracy of the approach was less than 2.9 (m) with an average error distance of 1.2 (m). This approach has good accuracy while not requiring any additional hardware, but it also requires a lengthy off-line training phase for the fingerprint database.
 
-BLE signal fingerprinting is an alternative to Wi-Fi AP fingerprinting. Using BLE over Wi-Fi has the advantages of faster scan times and lower power consumption. In \cite{faragher2015location}, a grid was established and probabilities were distributed into cells using a Bayesian likelihood function based on the results of a K-Nearest-Neighbor location estimation. Accuracies of less than 2.6m at 90\% of the time were reported with a deployment of 1 beacon per 30m2. This accuracy is better than Wi-Fi fingerprinting and uses less power, however the  system  requires a dense deployment of beacons to achieve medium levels of accuracies.
+BLE signal fingerprinting is an alternative to Wi-Fi AP fingerprinting. Using BLE over Wi-Fi has the advantages of faster scan times and lower power consumption. In \cite{faragher2015location}, a grid was established and probabilities were distributed into cells using a Bayesian likelihood function based on the results of a K-Nearest-Neighbor location estimation. Accuracies of less than 2.6m at 90\% of the time were reported with a deployment of 1 beacon per 30m$^2$. This accuracy is better than Wi-Fi fingerprinting and uses less power, however the  system  requires a dense deployment of beacons to achieve medium levels of accuracies.
 
 BLE beacon fingerprinting can be combined with a radio frequency propagation model to increase the accuracy of a system. The model is built by using the relationship between signal strength and distance. Because of the large levels of noise in the signal strength, the distance approximation is subject to high levels of volatility. \cite{zhuang2016smartphone} uses an outlier detection system along with an Extended Kalman Filter (EKF) on the fingerprint and propagation model estimations to reduce noise and improve accuracy. An improved approach to building the radio map by updating the data while the system is online to reduce time of off-line training was also used by this approach. This system achieved distance estimations of less than 2.5m at 90\% of the time for a dense deployment of beacons at 1 beacon per 9m.
 
