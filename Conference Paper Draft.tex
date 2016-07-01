@@ -63,6 +63,25 @@ BLE signal fingerprinting is an alternative to Wi-Fi AP fingerprinting. Using BL
 
 BLE beacon fingerprinting can be combined with a radio frequency propagation model to increase the accuracy of a system. The model is built by using the relationship between signal strength and distance. Because of the large levels of noise in the signal strength, the distance approximation is subject to high levels of volatility. \cite{zhuang2016smartphone} uses an outlier detection system along with an Extended Kalman Filter (EKF) on the fingerprint and propagation model estimations to reduce noise and improve accuracy. An improved approach to building the radio map by updating the data while the system is online to reduce time of off-line training was also used by this approach. This system achieved distance estimations of less than 2.5m at 90\% of the time for a dense deployment of beacons at 1 beacon per 9m.
 
+\section{Methodology}
+
+When developing the Wi-Fi fingerprinting system, a signal strength heat map of our testbed, the 3rd Floor of the Engineering Building B in the University of South Florida, was created. The map was created using the Ekahau HeatMapper application. The high availability of access points, as seen in the map, shows the high probabilities of an accurate implementation for this setting.
+
+Fig 1. Radio Signal Strength radio map of  of the ENB 3rd Floor, USF. (The heat mapping software used also marks the name of each access point in the area. Due to the large amount of AP’s in range, the text overlaps.)
+
+[Rough First Draft]
+For the fingerprinting implementation, a reference point map is created. At every reference point, RSSI data for every available access point are collected. In each location, 25 scans are performed and the signal strength values of each run are saved in the RSSI database. When the system tries to locate the user, it scans for the signal strengths from all available access points. The system then compares this list of values by matching the access points to the ones in the pre-recorded database. Comparisons are made with the mean of the signal strength values of each access point per location. If the difference between a current value and a mean value is within a certain threshold, which is decided based on how much the signal strengths varied, the probability weight of the user being in the corresponding location is increased. At the end of these calculations, the location with the highest weight is returned as the location of the user.
+
+[Dead Reckoning Model]
+The dead reckoning model used has two key components: displacement and orientation. Displacement can be determined by estimated step length after each step. [14] presented an easy to implement formula [add equation]. The values used are derived from raw accelerometer data that is passed into a low-pass filter to reduce noise and smooth the function’s peaks and valleys. Orientation, which will be converted to an azimuth angle, is tracked using a gryoscope and magnetometer.
+
+[Propagation Model]
+Distance from device to beacon is approximated using a radio frequency propagation model that relies on the relationship between RSS and distance. A commonly used model for such purposes as BluNavis is the free-space path loss model which can be seen in equation [x] [ADD EQUATION]. This equation has acceptable accuracy in open, line of sight environments but suffers from signal fluctuations caused by indoor environments.
+
+[Extended Kalman Filter]
+The Extended Kalman Filter (EKF) is used in BluNavi to increase the localization accuracy of the system by fusing sensor information provided by the fingerprinting algorithm, the dead reckoning model, and the propagation model. The filter works in two steps: a prediction step and an update step. The prediction step works by a process model that estimates the devices movement (or non-movement) through the indoor environment. The model is given by [PROCESS MODEL] where the state vector is defined as [STATE VECTOR]. Next, after sensor data is collected at time (t), a measurement model is used to record the observations: [MEASUREMENT MODEL].
+
+
 \section*{Acknowledgment}
 
 

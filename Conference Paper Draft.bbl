@@ -21,12 +21,6 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{nfb.org}
-\BIBentryALTinterwordspacing
-nfb.org, ``Blindness statistics.'' [Online]. Available:
-  \url{https://nfb.org/blindness-statistics}
-\BIBentrySTDinterwordspacing
-
 \bibitem{mainetti2014survey}
 L.~Mainetti, L.~Patrono, and I.~Sergi, ``A survey on indoor positioning
   systems,'' in \emph{Software, Telecommunications and Computer Networks
