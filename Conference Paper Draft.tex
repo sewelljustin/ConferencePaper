@@ -71,12 +71,11 @@ BLE beacon fingerprinting can be combined with a radio frequency propagation mod
 
 [INTRO PARAGRAPH TO DESCRIBE SYSTEM]
 
-When developing the Wi-Fi fingerprinting system, a signal strength heat map of our testbed, the 3rd Floor of the Engineering Building B in the University of South Florida, was created. The map was created using the Ekahau HeatMapper application. The high availability of access points, as seen in the map, shows the high probabilities of an accurate implementation for this setting.
 
-Fig 1. Radio Signal Strength radio map of  of the ENB 3rd Floor, USF. (The heat mapping software used also marks the name of each access point in the area. Due to the large amount of AP’s in range, the text overlaps.)
+For a fingerprinting implementation, a reference point map needs to be created. At every reference point, RSSI data for every available access point needs to be collected. This is done using the following algorithm when scanning with a device.
 
 \newcommand{\forcond}{$i=0$ \KwTo $N$}
-\newcommand{\forAP}{for each available AP}
+\newcommand{\forAP}{each available AP}
 \begin{algorithm}
  \KwData{Wi-Fi Scans Data}
  \KwResult{Fingerprint Database}
@@ -85,14 +84,32 @@ Fig 1. Radio Signal Strength radio map of  of the ENB 3rd Floor, USF. (The heat 
     \For{\forAP}{
       store AP's MAC address\;
       store AP's RSSI\;
-      store reference point\;
+      store current reference point\;
     }
  }
  \caption{Creating Fingerprint Database}
 \end{algorithm}
 
-[Rough First Draft]
-For the fingerprinting implementation, a reference point map is created. At every reference point, RSSI data for every available access point are collected. In each location, 25 scans are performed and the signal strength values of each run are saved in the RSSI database. When the system tries to locate the user, it scans for the signal strengths from all available access points. The system then compares this list of values by matching the access points to the ones in the pre-recorded database. Comparisons are made with the mean of the signal strength values of each access point per location. If the difference between a current value and a mean value is within a certain threshold, which is decided based on how much the signal strengths varied, the probability weight of the user being in the corresponding location is increased. At the end of these calculations, the location with the highest weight is returned as the location of the user.
+Where $N$ is the amount of scans to be done. After this database is created, the system can then estimate the user’s location through a weight based approach, where a weight is assigned to each reference point based on the similarities between the user’s current scans and the fingerprint database. This is done through the following algorithm:
+
+\newcommand{\forDB}{each ref. point containing the AP}
+\begin{algorithm}
+ \KwData{Wi-Fi Scans Data}
+ \KwResult{User Location}
+scan for access points\;
+\For{\forcond}{
+  \For{\forDB}{
+    \If{$X < (RSSI_{AP} - RSSI_{DB}) < X$}{
+      increase weight of location\;
+      }
+  }
+ }
+ \Return highest weight location\;
+
+ \caption{Estimating User Location}
+\end{algorithm}
+
+Where $X$ is a threshold due to how RSSI values vary.
 
 \subsection{Pedestrian Dead Reckoning Model}
 BluNavi uses a Dead Reckoning (DR) model to track two key localization components: displacement (movement) and orientation. Displacement occurs when the user of the system takes a step. Changes in orientation result from the user turning to face a new direction. The IMU's available in most mobile devices are used to track both components.
@@ -113,6 +130,8 @@ Distance from device to beacon is approximated using a radio frequency propagati
 [Extended Kalman Filter]
 The Extended Kalman Filter (EKF) is used in BluNavi to increase the localization accuracy of the system by fusing sensor information provided by the fingerprinting algorithm, the dead reckoning model, and the propagation model. The filter works in two steps: a prediction step and an update step. The prediction step works by a process model that estimates the devices movement (or non-movement) through the indoor environment. The model is given by [PROCESS MODEL] where the state vector is defined as [STATE VECTOR]. Next, after sensor data is collected at time (t), a measurement model is used to record the observations: [MEASUREMENT MODEL].
 
+
+\section*{}
 
 \section*{Acknowledgment}
 
