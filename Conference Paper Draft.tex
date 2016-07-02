@@ -1,5 +1,6 @@
 \documentclass[conference]{IEEEtran}
 \usepackage{cite}
+\usepackage[]{algorithm2e}
 
 \begin{document}
 
@@ -73,6 +74,22 @@ BLE beacon fingerprinting can be combined with a radio frequency propagation mod
 When developing the Wi-Fi fingerprinting system, a signal strength heat map of our testbed, the 3rd Floor of the Engineering Building B in the University of South Florida, was created. The map was created using the Ekahau HeatMapper application. The high availability of access points, as seen in the map, shows the high probabilities of an accurate implementation for this setting.
 
 Fig 1. Radio Signal Strength radio map of  of the ENB 3rd Floor, USF. (The heat mapping software used also marks the name of each access point in the area. Due to the large amount of AP’s in range, the text overlaps.)
+
+\newcommand{\forcond}{$i=0$ \KwTo $N$}
+\newcommand{\forAP}{for each available AP}
+\begin{algorithm}
+ \KwData{Wi-Fi Scans Data}
+ \KwResult{Fingerprint Database}
+ \For{\forcond}{
+    scan for access points\;
+    \For{\forAP}{
+      store AP's MAC address\;
+      store AP's RSSI\;
+      store reference point\;
+    }
+ }
+ \caption{Creating Fingerprint Database}
+\end{algorithm}
 
 [Rough First Draft]
 For the fingerprinting implementation, a reference point map is created. At every reference point, RSSI data for every available access point are collected. In each location, 25 scans are performed and the signal strength values of each run are saved in the RSSI database. When the system tries to locate the user, it scans for the signal strengths from all available access points. The system then compares this list of values by matching the access points to the ones in the pre-recorded database. Comparisons are made with the mean of the signal strength values of each access point per location. If the difference between a current value and a mean value is within a certain threshold, which is decided based on how much the signal strengths varied, the probability weight of the user being in the corresponding location is increased. At the end of these calculations, the location with the highest weight is returned as the location of the user.
