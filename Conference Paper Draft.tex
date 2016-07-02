@@ -31,6 +31,7 @@ Email: mlabrador@usf.edu}}
 \begin{abstract}
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dictum vestibulum libero, non ultricies est tempus quis. Cras ultrices lacinia iaculis. Quisque facilisis mi sed libero mollis, dignissim finibus massa porta. Quisque eget fermentum massa. Donec pulvinar quam sapien, non interdum nulla pellentesque vel. Nullam lacinia eros arcu, ut volutpat quam congue eu. Sed eget tincidunt risus. Curabitur sodales rhoncus nibh vitae pellentesque. Quisque urna nisi, maximus eget urna et, faucibus egestas ligula. Maecenas sit amet accumsan tellus. Proin vulputate felis ut risus commodo convallis. Aliquam eu venenatis mi, vitae facilisis arcu. Maecenas faucibus, odio non faucibus tincidunt, erat lectus vestibulum purus, sed vulputate turpis augue a lectus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas dolor dui, blandit sit amet nulla egestas, feugiat malesuada quam. Praesent vel posuere libero.\end{abstract}
 
+
 \section{Introduction}
 Indoor navigation systems have been in increasing demand since the introduction of smart-phone technology. The sensors in smart-phones can be used to provide accurate localization in an outdoor environment by using the Global Position System, but so far, no standard indoor localization system has been commercialized.
 
@@ -52,6 +53,7 @@ Our proposed system, BluNavi, localizes the user by fusing data provided by Iner
 
 The rest of this paper is organized as follows: Section II describes current indoor localization research. Section III explains the methodology behind our approach and section IV contains the evaluation of the experimental results. Lastly, Section V details our conclusions and future work.
 
+
 \section{Related Work}
 Wi-Fi based indoor localization has been a widely researched topic due to its availability, and the recent surge of BLE beacons has also spurred an interest in applying previous methods used in Wi-Fi and other technologies to the advantages of BLE. Most of these approaches use the RSSI of the wireless signal to approximate the location of the device.
 
@@ -63,7 +65,10 @@ BLE signal fingerprinting is an alternative to Wi-Fi AP fingerprinting. Using BL
 
 BLE beacon fingerprinting can be combined with a radio frequency propagation model to increase the accuracy of a system. The model is built by using the relationship between signal strength and distance. Because of the large levels of noise in the signal strength, the distance approximation is subject to high levels of volatility. \cite{zhuang2016smartphone} uses an outlier detection system along with an Extended Kalman Filter (EKF) on the fingerprint and propagation model estimations to reduce noise and improve accuracy. An improved approach to building the radio map by updating the data while the system is online to reduce time of off-line training was also used by this approach. This system achieved distance estimations of less than 2.5m at 90\% of the time for a dense deployment of beacons at 1 beacon per 9m.
 
+
 \section{Methodology}
+
+[INTRO PARAGRAPH TO DESCRIBE SYSTEM]
 
 When developing the Wi-Fi fingerprinting system, a signal strength heat map of our testbed, the 3rd Floor of the Engineering Building B in the University of South Florida, was created. The map was created using the Ekahau HeatMapper application. The high availability of access points, as seen in the map, shows the high probabilities of an accurate implementation for this setting.
 
@@ -72,8 +77,8 @@ Fig 1. Radio Signal Strength radio map of  of the ENB 3rd Floor, USF. (The heat 
 [Rough First Draft]
 For the fingerprinting implementation, a reference point map is created. At every reference point, RSSI data for every available access point are collected. In each location, 25 scans are performed and the signal strength values of each run are saved in the RSSI database. When the system tries to locate the user, it scans for the signal strengths from all available access points. The system then compares this list of values by matching the access points to the ones in the pre-recorded database. Comparisons are made with the mean of the signal strength values of each access point per location. If the difference between a current value and a mean value is within a certain threshold, which is decided based on how much the signal strengths varied, the probability weight of the user being in the corresponding location is increased. At the end of these calculations, the location with the highest weight is returned as the location of the user.
 
-[Dead Reckoning Model]
-The dead reckoning model used has two key components: displacement and orientation. Displacement can be determined by estimated step length after each step. [14] presented an easy to implement formula [add equation]. The values used are derived from raw accelerometer data that is passed into a low-pass filter to reduce noise and smooth the function’s peaks and valleys. Orientation, which will be converted to an azimuth angle, is tracked using a gryoscope and magnetometer.
+\subsection{Pedestrian Dead Reckoning Model}
+BluNavi uses a Dead Reckoning (DR) model to track two key localization components: displacement (movement) and orientation. Displacement occurs when the user of the system takes a step. Step length is then calculated to determine the approximated displacement. [14] presented an easy to implement formula [add equation]. The values used are derived from raw accelerometer data that is passed into a low-pass filter to reduce noise and smooth the function’s peaks and valleys. Orientation, which will be converted to an azimuth angle, is tracked using a gryoscope and magnetometer.
 
 [Propagation Model]
 Distance from device to beacon is approximated using a radio frequency propagation model that relies on the relationship between RSS and distance. A commonly used model for such purposes as BluNavis is the free-space path loss model which can be seen in equation [x] [ADD EQUATION]. This equation has acceptable accuracy in open, line of sight environments but suffers from signal fluctuations caused by indoor environments.
