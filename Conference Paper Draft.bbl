@@ -27,6 +27,10 @@ L.~Mainetti, L.~Patrono, and I.~Sergi, ``A survey on indoor positioning
   (SoftCOM), 2014 22nd International Conference on}.\hskip 1em plus 0.5em minus
   0.4em\relax IEEE, 2014, pp. 111--120.
 
+\bibitem{NFB}
+``{National Federation of the Blind} blindness statistics,''
+  \url{https://nfb.org/blindness-statistics}, accessed: 2016-06-20.
+
 \bibitem{otsason2005accurate}
 V.~Otsason, A.~Varshavsky, A.~LaMarca, and E.~De~Lara, ``Accurate gsm indoor
   localization,'' in \emph{International conference on ubiquitous
@@ -51,6 +55,10 @@ A.~Ward, A.~Jones, and A.~Hopper, ``A new location technique for the active
 C.~Medina, J.~C. Segura, and A.~De~la Torre, ``Ultrasound indoor positioning
   system based on a low-power wireless sensor network providing sub-centimeter
   accuracy,'' \emph{Sensors}, vol.~13, no.~3, pp. 3501--3526, 2013.
+
+\bibitem{Eddystone}
+``{Google Beacons} eddystone format,''
+  \url{https://developers.google.com/beacons/eddystone}, accessed: 2016-05-24.
 
 \bibitem{chan2012indoor}
 S.~Chan and G.~Sohn, ``Indoor localization using wi-fi based fingerprinting and
