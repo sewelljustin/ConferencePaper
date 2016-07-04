@@ -1,16 +1,16 @@
 # Fdb version 3
-["bibtex Conference Paper Draft"] 1467648612 "Conference Paper Draft.aux" "Conference Paper Draft.bbl" "Conference Paper Draft" 1467648731
-  "Conference Paper Draft.aux" 1467648730 2010 23d38671f5bc56293080b09c894e85bb ""
+["bibtex Conference Paper Draft"] 1467648612 "Conference Paper Draft.aux" "Conference Paper Draft.bbl" "Conference Paper Draft" 1467658770
+  "Conference Paper Draft.aux" 1467658769 2010 23d38671f5bc56293080b09c894e85bb ""
   "Conference Paper Draft.bcf" 0 -1 0 ""
   "bibliography.bib" 1467600071 4108 c6538068c4740fa49c784fdfed6147b4 ""
   "c:/texlive/2015/texmf-dist/bibtex/bst/ieeetran/IEEEtran.bst" 1464273046 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
   (generated)
   "Conference Paper Draft.bbl"
   "Conference Paper Draft.blg"
-["pdflatex"] 1467648728 "Conference Paper Draft.tex" "Conference Paper Draft.pdf" "Conference Paper Draft" 1467648731
-  "Conference Paper Draft.aux" 1467648730 2010 23d38671f5bc56293080b09c894e85bb ""
+["pdflatex"] 1467658767 "Conference Paper Draft.tex" "Conference Paper Draft.pdf" "Conference Paper Draft" 1467658770
+  "Conference Paper Draft.aux" 1467658769 2010 23d38671f5bc56293080b09c894e85bb ""
   "Conference Paper Draft.bbl" 1467648613 3995 c4c65e0966028b88d9c489f3278f5841 "bibtex Conference Paper Draft"
-  "Conference Paper Draft.tex" 1467648726 15981 92524e261edb3032597bb644f1ee877a ""
+  "Conference Paper Draft.tex" 1467649312 15995 bbb2fd9ddef107261a6c366dbf1eb89d ""
   "c:/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc" 1464275108 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2015/texmf-dist/fonts/map/fontname/texfonts.map" 1464275847 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "c:/texlive/2015/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1464280515 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -72,5 +72,5 @@
   "images/AccelerometerGraph.png" 1467643134 51336 ea653a168eba8e7580ead9e17afb9715 ""
   (generated)
   "Conference Paper Draft.log"
-  "Conference Paper Draft.aux"
   "Conference Paper Draft.pdf"
+  "Conference Paper Draft.aux"
