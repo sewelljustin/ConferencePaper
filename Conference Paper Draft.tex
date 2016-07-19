@@ -8,7 +8,7 @@
 
 \begin{document}
 
-\title{Indoor Localization for Mobile Devices Using Bluetooth Low Energy Beacons and Wi-Fi Access Points}
+\title{BluNavi: An Indoor Positioning and Navigation System}
 
 \author{
 \IEEEauthorblockN{Justin L. Sewell, Alfredo J. Perez}
@@ -196,6 +196,16 @@ P_k = (I - K_kH_k)P_{kp}
 where $K_k$ is the kalman gain, $R$ is the measurement noise covariance matrix dervied from $v_k$, $x_k$ is the corrected current state estimate, and $I$ is the identity matrix.
 
 \section{Evaluation}
+
+Experimental analysis was conducted in order to evaluate the accuracy of the proposed system. Multiple test beds were created in the hallways of the University of South Florida ENB II building. Various one meter cells were established in each of the hallways. An example of one of the test beds can be seen in Fig. \ref{fig:testbed}. The accuracies of each module of BluNavi were tested and evaluated.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.25]{TestbedCollage.png}
+\caption{Test Bed}
+\captionsetup{justification=centering,margin=2cm}
+\label{fig:testbed}
+\end{figure}
 
 \section*{Acknowledgment}
 This research has been partially supported by the National Science Foundation under grant No. 1458928, An REU Site on Ubiquitous Sensing.
