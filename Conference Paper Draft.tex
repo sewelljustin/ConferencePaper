@@ -197,15 +197,41 @@ where $K_k$ is the kalman gain, $R$ is the measurement noise covariance matrix d
 
 \section{Evaluation}
 
-Experimental analysis was conducted in order to evaluate the accuracy of the proposed system. Multiple test beds were created in the hallways of the University of South Florida ENB II building. Various one meter cells were established in each of the hallways. An example of one of the test beds can be seen in Fig. \ref{fig:testbed}. The accuracies of each module of BluNavi were tested and evaluated.
+Experimental analysis was conducted in order to evaluate the accuracy of the proposed system. Multiple test beds were created in the hallways of the University of South Florida ENB II building. One meter cells were established in each of the hallways. An example of one of the test beds can be seen in Fig. \ref{fig:testbed}. The accuracies of each module of BluNavi were tested and evaluated.
 
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.25]{TestbedCollage.png}
-\caption{Test Bed}
+\caption{Example Test Bed}
 \captionsetup{justification=centering,margin=2cm}
 \label{fig:testbed}
 \end{figure}
+
+\subsection{Fingerprinting System}
+
+For the evaluation of the fingerprinting system, three different hallway testbeds were used. Fingerprints were created out of three meter cells at each of the testbeds. Five tests were conducted at each of the testbeds, and each test was performed twice. Each test consisted of 20 estimations of the user’s location that the system would make under various conditions. These tests involved different user movements such as: straightforward alternations between cells, random alternations between cells, at different orientations per cell, at different positions within each cell, and for random movements within each cell. The accuracies of each test were calculated, providing 30 data points. A normal distribution was assumed and tested for using the 30 data points, as shown in Fig. \ref{fig:fingerprintdistribution}. For these evaluations, a confidence interval was calculated using this data set, which resulted in a 95\% confidence of $\pm$  3.07\% from the mean accuracy of 82.33\% for three meter cells.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.65]{FingerprintDistribution.png}
+\caption{Distribution of Fingerprint System Accuracies}
+\captionsetup{justification=centering,margin=2cm}
+\label{fig:fingerprintdistribution}
+\end{figure}
+
+\subsection{Dead Reckoning Model}
+
+The dead reckoning model was evaluated by walking the perimeter of a rectangular hallway. The ground truth was established by timestamps of the test when passing established reference points. Linear interpolation was then used on this data to calculate the ground truth values between reference points. During the test, the x and y coordinates of the system were recorded every 500 milliseconds along with a timestamp. The error of each data point was then found by using the distance formula between ground truth value and dead reckoning model estimate. The mean accuracy of the model was found to be less than 4.2 m with 90\% confidence. A comparison of the ground truth data points and dead reckoning model can be seen in Fig. \ref{fig:drmap}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.4]{DeadReckoningMap.png}
+\caption{Dead Reckoning Model Positions Compared to Ground Truth}
+\captionsetup{justification=centering,margin=2cm}
+\label{fig:drmap}
+\end{figure}
+
+
 
 \section*{Acknowledgment}
 This research has been partially supported by the National Science Foundation under grant No. 1458928, An REU Site on Ubiquitous Sensing.
