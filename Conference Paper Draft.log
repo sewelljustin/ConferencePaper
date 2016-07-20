@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.5.27)  19 JUL 2016 18:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.5.27)  20 JUL 2016 13:55
 entering extended mode
 **"C:/Users/justinsewell/Desktop/Conference Paper/ConferencePaper/Conference Paper Draft.tex"
 ("C:/Users/justinsewell/Desktop/Conference Paper/ConferencePaper/Conference Paper Draft.tex"
@@ -335,34 +335,30 @@ Missing character: There is no ™ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
- <images/SystemDiagram.png, id=8, 722.7pt x 506.6428pt>
+ [2] <images/SystemDiagram.png, id=13, 722.7pt x 506.6428pt>
 File: images/SystemDiagram.png Graphic file (type png)
  <use images/SystemDiagram.png>
-Package pdftex.def Info: images/SystemDiagram.png used on input line 82.
+Package pdftex.def Info: images/SystemDiagram.png used on input line 87.
 (pdftex.def)             Requested size: 180.67455pt x 126.66039pt.
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+ <images/AccelerometerGraph.png, id=15, 963.6pt x 722.7pt>
+File: images/AccelerometerGraph.png Graphic file (type png)
+ <use images/AccelerometerGraph.png>
+Package pdftex.def Info: images/AccelerometerGraph.png used on input line 148.
+(pdftex.def)             Requested size: 240.89941pt x 180.67455pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[2]
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no ™ in font ptmr7t!
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no ™ in font ptmr7t!
-
-Underfull \vbox (badness 1472) has occurred while \output is active []
-
- <images/AccelerometerGraph.png, id=15, 963.6pt x 722.7pt>
-File: images/AccelerometerGraph.png Graphic file (type png)
- <use images/AccelerometerGraph.png>
-Package pdftex.def Info: images/AccelerometerGraph.png used on input line 143.
-(pdftex.def)             Requested size: 240.89941pt x 180.67455pt.
- [3 <./images/SystemDiagram.png> <./images/AccelerometerGraph.png>] <images/TestbedCollage.png, id=26, 722.7pt x 610.53094pt>
+[3 <./images/SystemDiagram.png>] <images/TestbedCollage.png, id=26, 722.7pt x 610.53094pt>
 File: images/TestbedCollage.png Graphic file (type png)
  <use images/TestbedCollage.png>
-Package pdftex.def Info: images/TestbedCollage.png used on input line 204.
+Package pdftex.def Info: images/TestbedCollage.png used on input line 209.
 (pdftex.def)             Requested size: 180.67455pt x 152.63235pt.
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
@@ -370,22 +366,35 @@ Missing character: There is no ™ in font ptmr7t!
  <images/FingerprintDistribution.png, id=27, 389.20406pt x 217.5628pt>
 File: images/FingerprintDistribution.png Graphic file (type png)
  <use images/FingerprintDistribution.png>
-Package pdftex.def Info: images/FingerprintDistribution.png used on input line 216.
+Package pdftex.def Info: images/FingerprintDistribution.png used on input line 221.
 (pdftex.def)             Requested size: 252.97964pt x 141.41414pt.
 
-Overfull \hbox (0.97964pt too wide) in paragraph at lines 216--217
+Overfull \hbox (0.97964pt too wide) in paragraph at lines 221--222
  [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[4 <./images/TestbedCollage.png>] <images/DeadReckoningMap.png, id=34, 566.115pt x 368.87813pt>
+[4 <./images/AccelerometerGraph.png> <./images/TestbedCollage.png>] <images/DeadReckoningMap.png, id=35, 645.16031pt x 368.87813pt>
 File: images/DeadReckoningMap.png Graphic file (type png)
  <use images/DeadReckoningMap.png>
-Package pdftex.def Info: images/DeadReckoningMap.png used on input line 228.
-(pdftex.def)             Requested size: 226.44199pt x 147.54863pt.
- ("Conference Paper Draft.bbl"
+Package pdftex.def Info: images/DeadReckoningMap.png used on input line 233.
+(pdftex.def)             Requested size: 225.80948pt x 129.10927pt.
+ <images/BKON.jpg, id=36, 963.6pt x 804.00375pt>
+File: images/BKON.jpg Graphic file (type jpg)
+ <use images/BKON.jpg>
+Package pdftex.def Info: images/BKON.jpg used on input line 245.
+(pdftex.def)             Requested size: 192.71658pt x 160.7979pt.
+ <images/EKFMap.png, id=37, 581.17125pt x 386.94562pt>
+File: images/EKFMap.png Graphic file (type png)
+ <use images/EKFMap.png>
+Package pdftex.def Info: images/EKFMap.png used on input line 257.
+(pdftex.def)             Requested size: 203.41298pt x 135.43298pt.
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+ [5 <./images/FingerprintDistribution.png> <./images/DeadReckoningMap.png> <./images/BKON.jpg> <./images/EKFMap.png>] ("Conference Paper Draft.bbl"
 Underfull \hbox (badness 10000) in paragraph at lines 31--33
 []\OT1/ptm/m/n/8 ``National Fed-er-a-tion of the Blind blind-ness statis-tics,''
  []
@@ -412,23 +421,23 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[5 <./images/FingerprintDistribution.png> <./images/DeadReckoningMap.png>] ("Conference Paper Draft.aux") )
+[6] ("Conference Paper Draft.aux") )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 5071 strings out of 493335
- 82117 string characters out of 3139239
- 165406 words of memory out of 3000000
- 8558 multiletter control sequences out of 15000+200000
- 35704 words of font info for 66 fonts, out of 3000000 for 9000
+ 5099 strings out of 493335
+ 82470 string characters out of 3139239
+ 167422 words of memory out of 3000000
+ 8576 multiletter control sequences out of 15000+200000
+ 37979 words of font info for 74 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,14n,39p,1205b,3932s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "Conference Paper Draft.pdf" (5 pages, 1344086 bytes).
+ 38i,14n,39p,1466b,3932s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on "Conference Paper Draft.pdf" (6 pages, 1570268 bytes).
 PDF statistics:
- 78 PDF objects out of 1000 (max. 8388607)
+ 88 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
