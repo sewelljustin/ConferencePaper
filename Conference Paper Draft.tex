@@ -214,9 +214,15 @@ Experimental analysis was conducted in order to evaluate the accuracy of the pro
 
 \subsection{Fingerprinting System}
 
-For the evaluation of the fingerprinting system, three different hallway testbeds were used. Fingerprints were created out of three meter cells at each of the testbeds. A LG G4 was used to scan for Wi-Fi APs. Five tests were conducted at each of the testbeds, and each test was performed twice. Each test consisted of 20 estimations of the user’s location that the system would make under various conditions. These tests involved different user movements such as: straightforward alternations between cells, random alternations between cells, at different orientations per cell, at different positions within each cell, and for random movements within each cell. The accuracies of each test were calculated, providing 30 data points. A normal distribution was assumed and tested for using the 30 data points, as shown in Fig. \ref{fig:fingerprintdistribution}. For these evaluations, a confidence interval was calculated using this data set, which resulted in a 95\% confidence of $\pm$  3.07\% from the mean accuracy of 82.33\% for three meter cells.
+For the evaluation of the fingerprinting system, three different hallway testbeds were used. Fingerprints were created out of three meter cells at each of the testbeds. An LG G4 was used to scan for Wi-Fi APs. Five tests were conducted at each of the testbeds, and each test was performed twice. Each test consisted of 20 estimations of the user’s location that the system would make under various conditions. These tests involved different user movements such as: straightforward alternations between cells, random alternations between cells, at different orientations per cell, at different positions within each cell, and for random movements within each cell. The accuracies of each test were calculated, providing 30 data points. A normal distribution was assumed and tested for using the 30 data points, as shown in Fig. \ref{fig:fingerprintdistribution}. For these evaluations, a confidence interval was calculated using this data set, which resulted in a 95\% confidence of $\pm$  3.07\% from the mean accuracy of 82.33\% for three meter cells.
 
-
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.65]{Normal_Distribution.png}
+\caption{Distribution of Fingerprint System Accuracies}
+\captionsetup{justification=centering,margin=2cm}
+\label{fig:fingerprintdistribution}
+\end{figure}
 
 \subsection{Dead Reckoning Model}
 

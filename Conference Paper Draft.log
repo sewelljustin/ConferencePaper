@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.5.27)  20 JUL 2016 13:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.5.27)  20 JUL 2016 18:53
 entering extended mode
 **"C:/Users/justinsewell/Desktop/Conference Paper/ConferencePaper/Conference Paper Draft.tex"
 ("C:/Users/justinsewell/Desktop/Conference Paper/ConferencePaper/Conference Paper Draft.tex"
@@ -363,45 +363,53 @@ Package pdftex.def Info: images/TestbedCollage.png used on input line 209.
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
- <images/FingerprintDistribution.png, id=27, 389.20406pt x 217.5628pt>
-File: images/FingerprintDistribution.png Graphic file (type png)
- <use images/FingerprintDistribution.png>
-Package pdftex.def Info: images/FingerprintDistribution.png used on input line 221.
-(pdftex.def)             Requested size: 252.97964pt x 141.41414pt.
-
-Overfull \hbox (0.97964pt too wide) in paragraph at lines 221--222
- [][] 
- []
+ <images/Normal_Distribution.png, id=27, 368.87813pt x 182.93344pt>
+File: images/Normal_Distribution.png Graphic file (type png)
+ <use images/Normal_Distribution.png>
+Package pdftex.def Info: images/Normal_Distribution.png used on input line 221.
+(pdftex.def)             Requested size: 239.76793pt x 118.90532pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[4 <./images/AccelerometerGraph.png> <./images/TestbedCollage.png>] <images/DeadReckoningMap.png, id=35, 645.16031pt x 368.87813pt>
-File: images/DeadReckoningMap.png Graphic file (type png)
- <use images/DeadReckoningMap.png>
-Package pdftex.def Info: images/DeadReckoningMap.png used on input line 233.
-(pdftex.def)             Requested size: 225.80948pt x 129.10927pt.
- <images/BKON.jpg, id=36, 963.6pt x 804.00375pt>
+[4 <./images/AccelerometerGraph.png> <./images/TestbedCollage.png>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 231.
+
+<images/TraversalMap.png, id=35, 523.9575pt x 713.66624pt>
+File: images/TraversalMap.png Graphic file (type png)
+ <use images/TraversalMap.png>
+Package pdftex.def Info: images/TraversalMap.png used on input line 233.
+(pdftex.def)             Requested size: 261.9781pt x 356.83224pt.
+
+Overfull \hbox (9.9781pt too wide) in paragraph at lines 233--234
+ [][] 
+ []
+
+<images/BKON.jpg, id=36, 963.6pt x 804.00375pt>
 File: images/BKON.jpg Graphic file (type jpg)
  <use images/BKON.jpg>
 Package pdftex.def Info: images/BKON.jpg used on input line 245.
 (pdftex.def)             Requested size: 192.71658pt x 160.7979pt.
- <images/EKFMap.png, id=37, 581.17125pt x 386.94562pt>
-File: images/EKFMap.png Graphic file (type png)
- <use images/EKFMap.png>
-Package pdftex.def Info: images/EKFMap.png used on input line 257.
-(pdftex.def)             Requested size: 203.41298pt x 135.43298pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
- [5 <./images/FingerprintDistribution.png> <./images/DeadReckoningMap.png> <./images/BKON.jpg> <./images/EKFMap.png>] ("Conference Paper Draft.bbl"
+
+Underfull \vbox (badness 1005) has occurred while \output is active []
+
+ [5 <./images/Normal_Distribution.png> <./images/TraversalMap.png> <./images/BKON.jpg>] ("Conference Paper Draft.bbl"
 Underfull \hbox (badness 10000) in paragraph at lines 31--33
 []\OT1/ptm/m/n/8 ``National Fed-er-a-tion of the Blind blind-ness statis-tics,''
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 60--62
-[]\OT1/ptm/m/n/8 ``Google Bea-cons ed-dy-s-tone for-mat,''
+[]\OT1/ptm/m/n/8 ``Google bea-cons ed-dy-s-tone for-mat,''
  []
 
 
@@ -427,17 +435,17 @@ Before submitting the final camera ready copy, remember to:
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 5099 strings out of 493335
- 82470 string characters out of 3139239
- 167422 words of memory out of 3000000
- 8576 multiletter control sequences out of 15000+200000
+ 5093 strings out of 493335
+ 82328 string characters out of 3139239
+ 167414 words of memory out of 3000000
+ 8571 multiletter control sequences out of 15000+200000
  37979 words of font info for 74 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,14n,39p,1466b,3932s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "Conference Paper Draft.pdf" (6 pages, 1570268 bytes).
+Output written on "Conference Paper Draft.pdf" (6 pages, 1576997 bytes).
 PDF statistics:
- 88 PDF objects out of 1000 (max. 8388607)
+ 86 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
