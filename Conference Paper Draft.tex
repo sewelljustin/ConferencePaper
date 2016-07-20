@@ -216,29 +216,23 @@ Experimental analysis was conducted in order to evaluate the accuracy of the pro
 
 For the evaluation of the fingerprinting system, three different hallway testbeds were used. Fingerprints were created out of three meter cells at each of the testbeds. A LG G4 was used to scan for Wi-Fi APs. Five tests were conducted at each of the testbeds, and each test was performed twice. Each test consisted of 20 estimations of the user’s location that the system would make under various conditions. These tests involved different user movements such as: straightforward alternations between cells, random alternations between cells, at different orientations per cell, at different positions within each cell, and for random movements within each cell. The accuracies of each test were calculated, providing 30 data points. A normal distribution was assumed and tested for using the 30 data points, as shown in Fig. \ref{fig:fingerprintdistribution}. For these evaluations, a confidence interval was calculated using this data set, which resulted in a 95\% confidence of $\pm$  3.07\% from the mean accuracy of 82.33\% for three meter cells.
 
-\begin{figure}[h]
-\centering
-\includegraphics[scale=0.65]{FingerprintDistribution.png}
-\caption{Distribution of Fingerprint System Accuracies}
-\captionsetup{justification=centering,margin=2cm}
-\label{fig:fingerprintdistribution}
-\end{figure}
+
 
 \subsection{Dead Reckoning Model}
 
-The dead reckoning model was evaluated by walking the perimeter of a rectangular hallway. A Nexus 5 was used for this test. The ground truth was established by timestamps of the test when passing established reference points. Linear interpolation was then used on this data to calculate the ground truth values between reference points. During the test, the x and y coordinates of the system were recorded every 500 milliseconds along with a timestamp. The error of each data point was then found by using the distance formula between ground truth value and dead reckoning model estimate. The mean accuracy of the model was found to be less than 4.2 m with 90\% confidence. A comparison of the ground truth data points and dead reckoning model can be seen in Fig. \ref{fig:drmap}. From the figure, it is clear that the dead reckoning model has a no way to correct itself from the inaccuracies of the step length estimation.
+The dead reckoning model was evaluated by walking the perimeter of a rectangular hallway. A Nexus 5 was used for this test. The ground truth was established by timestamps of the test when passing established reference points. Linear interpolation was then used on this data to calculate the ground truth values between reference points. During the test, the x and y coordinates of the system were recorded every 500 milliseconds along with a timestamp. The error of each data point was then found by using the distance formula between ground truth value and dead reckoning model estimate. The mean accuracy of the model was found to be 3.88 m  0.31 m with 90\% confidence. A comparison of the ground truth data points and dead reckoning model can be seen in upper half of Fig. \ref{fig:traversalmap}. From the figure, it is clear that the dead reckoning model has a no way to correct itself from the inaccuracies of the step length estimation.
 
-\begin{figure}[h]
+\begin{figure}[]
 \centering
-\includegraphics[scale=0.35]{DeadReckoningMap.png}
-\caption{Dead Reckoning Traversal}
+\includegraphics[scale=0.5]{TraversalMap.png}
+\caption{Traversals of the Dead Reckoning Model and Extended Kalman Filter}
 \captionsetup{justification=centering,margin=2cm}
-\label{fig:drmap}
+\label{fig:traversalmap}
 \end{figure}
 
 \subsection{Propagation Model}
 
-The evaluation of the propagation model took place in one of the previously mentioned test beds. A BKON A1 set at a transmission power of 0 dbm and advertising interval of 500 ms was used for the test. The A1 can be seen in Fig. \ref{fig:bkon}. A Nexus 5 was used to scan for the BLE beacon. Ten signals were recorded for each one meter intervals from one meter up to ten meters for a total of 100 signals. The signals were then passed through the propagation model and the distance estimates recorded. The error of each distance estimate was computed and the mean error of the data set was found to be less than 7.3 m with 90\% confidence.
+The evaluation of the propagation model took place in one of the previously mentioned test beds. A BKON A1 set at a transmission power of 0 dbm and advertising interval of 500 ms was used for the test. The A1 can be seen in Fig. \ref{fig:bkon}. A Nexus 5 was used to scan for the BLE beacon. The test was conducted with line of sight conditions to the beacon. Ten signals were recorded for each one meter interval from one meter up to ten meters for a total of 100 data points. The signals were then passed through the propagation model and the distance estimates recorded. The error of each distance estimate was computed and the mean error of the data set was found to be less than 7.3 m with 90\% confidence.
 
 \begin{figure}[h]
 \centering
@@ -250,19 +244,12 @@ The evaluation of the propagation model took place in one of the previously ment
 
 \subsection{Extended Kalman Filter}
 
-The extended Kalman Filter was evaluated similarly to the dead reckoning model. Eight of the A1 models were used for the test and placed around the same test bed used for the dead reckoning model evaluation. The Nexus 5 was also used for this test. The extended Kalman Filter state estimate (position) was recorded every 500 ms and 141 data points were collected. Ground truth timestamps were recorded at the same reference points used in the dead reckoning evaluation and linear interpolation was used to find the ground truth positions. The distance error of the data points was calculated and the mean error was found to be less than 11.0 m with 90\% confidence. A comparison between ground truth data points and the extended Kalman Filter state estimates can be seen in Fig. \ref{fig:ekfmap}. From the results, it is clear that the system suffers from a cumulative error problem.
+The extended Kalman Filter was evaluated similarly to the dead reckoning model. Eight of the A1 models were used for the test and placed around the same test bed used for the dead reckoning model evaluation. The Nexus 5 was also used for this test. The extended Kalman Filter state estimate (position) was recorded every 500 ms and 141 data points were collected. Ground truth timestamps were recorded at the same reference points used in the dead reckoning evaluation and linear interpolation was used to find the ground truth positions. The distance error of the data points was calculated and the mean error was found to be less than 11.0 m with 90\% confidence. A comparison between ground truth data points and the extended Kalman Filter state estimates can be seen in the lower map of the Fig. \ref{fig:traversalmap}. From the results, it is clear that the system suffers from a cumulative error problem.
 
-\begin{figure}[h]
-\centering
-\includegraphics[scale=0.35]{EKFMap.png}
-\caption{Extended Kalman Filter Traversal}
-\captionsetup{justification=centering,margin=2cm}
-\label{fig:ekfmap}
-\end{figure}
 
 \section{Conclusions and Future Work}
 
-The research conducted brought about functional systems for indoor localization through the development of the fingerprinting system, dead reckoning model, propagation model and extended Kalman filter. Each component was evaluated for accuracy. The fingerprinting system achieved a mean accuracy of 82.33\% $\pm$ 3.07\% with 95\% confidence. The dead reckoning model obtained a mean accuracy of 4.2 m with 90\% confidence. The propagation model had an accuracy of 7.3 m with 90\% confidence. The extended Kalman Filter with sensor fusion had an accuracy of 11.0 m with 90\% confidence. As a future work, these systems would be improved upon so as to further increase their accuracies. Possible improvements include the implementation of a correlation algorithm for the fingerprinting system, such as Hidden Markov, and further work on the extended Kalman filter. These systems would also be integrated into one single application, along with a line of sight detection module for deciding which system would be more accurate given the user’s current conditions. Analysis on power consumption of the application would also be beneficial future work.
+The research conducted brought about functional systems for indoor localization through the development of the fingerprinting system, dead reckoning model, propagation model and extended Kalman filter. Each component was evaluated for accuracy. The fingerprinting system achieved a mean accuracy of 82.33\% $\pm$ 3.07\% with 95\% confidence. The dead reckoning model obtained a mean accuracy of 4.2 m with 90\% confidence. The propagation model had an accuracy of 7.3 m with 90\% confidence. The extended Kalman Filter with sensor fusion had an accuracy of 11.0 m with 90\% confidence. As a future work, these systems would be improved upon so as to further increase their accuracies. Possible improvements include the implementation of a correlation algorithm for the fingerprinting system, such as Hidden Markov, and further work on the extended Kalman Filter. These systems would also be integrated into one single application, along with a line of sight detection module for deciding which system would be more accurate given the user’s current conditions. Analysis on power consumption of the application would also be beneficial future work.
 
 
 \section*{Acknowledgment}
