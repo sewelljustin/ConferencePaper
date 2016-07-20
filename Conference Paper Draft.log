@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.5.27)  20 JUL 2016 19:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.5.27)  20 JUL 2016 19:41
 entering extended mode
 **"C:/Users/justinsewell/Desktop/Conference Paper/ConferencePaper/Conference Paper Draft.tex"
 ("C:/Users/justinsewell/Desktop/Conference Paper/ConferencePaper/Conference Paper Draft.tex"
@@ -363,51 +363,61 @@ Package pdftex.def Info: images/AccelerometerGraph.png used on input line 148.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[3 <./images/SystemDiagram.png>] <images/TestbedCollage.png, id=26, 722.7pt x 610.53094pt>
+[3 <./images/SystemDiagram.png>] <images/ComparisonTable.png, id=26, 421.575pt x 150.5625pt>
+File: images/ComparisonTable.png Graphic file (type png)
+ <use images/ComparisonTable.png>
+Package pdftex.def Info: images/ComparisonTable.png used on input line 209.
+(pdftex.def)             Requested size: 252.94695pt x 90.33818pt.
+
+Overfull \hbox (0.94695pt too wide) in paragraph at lines 209--210
+ [][] 
+ []
+
+<images/TestbedCollage.png, id=27, 722.7pt x 610.53094pt>
 File: images/TestbedCollage.png Graphic file (type png)
  <use images/TestbedCollage.png>
-Package pdftex.def Info: images/TestbedCollage.png used on input line 209.
+Package pdftex.def Info: images/TestbedCollage.png used on input line 217.
 (pdftex.def)             Requested size: 180.67455pt x 152.63235pt.
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
- <images/Normal_Distribution.png, id=27, 368.87813pt x 182.93344pt>
+ [4 <./images/AccelerometerGraph.png> <./images/ComparisonTable.png> <./images/TestbedCollage.png>] <images/Normal_Distribution.png, id=35, 368.87813pt x 182.93344pt>
 File: images/Normal_Distribution.png Graphic file (type png)
  <use images/Normal_Distribution.png>
-Package pdftex.def Info: images/Normal_Distribution.png used on input line 221.
+Package pdftex.def Info: images/Normal_Distribution.png used on input line 229.
 (pdftex.def)             Requested size: 239.76793pt x 118.90532pt.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[4 <./images/AccelerometerGraph.png> <./images/TestbedCollage.png>]
-
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 231.
+               Default added (so using `tbp') on input line 239.
 
-<images/TraversalMap.png, id=35, 523.9575pt x 713.66624pt>
+<images/TraversalMap.png, id=36, 523.9575pt x 713.66624pt>
 File: images/TraversalMap.png Graphic file (type png)
  <use images/TraversalMap.png>
-Package pdftex.def Info: images/TraversalMap.png used on input line 233.
+Package pdftex.def Info: images/TraversalMap.png used on input line 241.
 (pdftex.def)             Requested size: 261.9781pt x 356.83224pt.
 
-Overfull \hbox (9.9781pt too wide) in paragraph at lines 233--234
+Overfull \hbox (9.9781pt too wide) in paragraph at lines 241--242
  [][] 
  []
 
-<images/BKON.jpg, id=36, 963.6pt x 804.00375pt>
+<images/BKON.jpg, id=37, 963.6pt x 804.00375pt>
 File: images/BKON.jpg Graphic file (type jpg)
  <use images/BKON.jpg>
-Package pdftex.def Info: images/BKON.jpg used on input line 245.
+Package pdftex.def Info: images/BKON.jpg used on input line 253.
 (pdftex.def)             Requested size: 192.71658pt x 160.7979pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+
+Underfull \vbox (badness 1005) has occurred while \output is active []
+
+ [5 <./images/Normal_Distribution.png> <./images/TraversalMap.png> <./images/BKON.jpg>]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
-[5 <./images/Normal_Distribution.png> <./images/TraversalMap.png> <./images/BKON.jpg>] ("Conference Paper Draft.bbl"
+ ("Conference Paper Draft.bbl"
 Underfull \hbox (badness 10000) in paragraph at lines 31--33
 []\OT1/ptm/m/n/8 ``National Fed-er-a-tion of the Blind blind-ness statis-tics,''
  []
@@ -434,25 +444,23 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[6
-
-] ("Conference Paper Draft.aux") )
+[6] ("Conference Paper Draft.aux") )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 5093 strings out of 493335
- 82328 string characters out of 3139239
- 167414 words of memory out of 3000000
- 8571 multiletter control sequences out of 15000+200000
+ 5099 strings out of 493335
+ 82491 string characters out of 3139239
+ 166422 words of memory out of 3000000
+ 8576 multiletter control sequences out of 15000+200000
  37979 words of font info for 74 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,14n,39p,1351b,3932s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,14n,39p,1595b,3932s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "Conference Paper Draft.pdf" (6 pages, 1576848 bytes).
+Output written on "Conference Paper Draft.pdf" (6 pages, 1584535 bytes).
 PDF statistics:
- 86 PDF objects out of 1000 (max. 8388607)
+ 87 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

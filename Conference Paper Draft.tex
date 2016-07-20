@@ -202,7 +202,15 @@ where $K_k$ is the kalman gain, $R$ is the measurement noise covariance matrix d
 
 \section{Evaluation}
 
-Experimental analysis was conducted in order to evaluate the accuracy of the proposed system. Multiple test beds were created in the hallways of the University of South Florida ENB II building. One meter cells were established in each of the hallways. An example of one of the test beds can be seen in Fig. \ref{fig:testbed}. The accuracies of each module of BluNavi were tested and evaluated.
+Experimental analysis was conducted in order to evaluate the accuracy of the proposed system. Multiple test beds were created in the hallways of the University of South Florida ENB II building. One meter cells were established in each of the hallways. An example of one of the test beds can be seen in Fig. \ref{fig:testbed}. The accuracies of each module of BluNavi were tested and evaluated and a summary of the accuracies can be seen in Fig. \ref{fig:comparisontable}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{ComparisonTable.png}
+\caption{Table of Accuracies}
+\captionsetup{justification=centering,margin=2cm}
+\label{fig:comparisontable}
+\end{figure}
 
 \begin{figure}[h]
 \centering
@@ -256,7 +264,8 @@ The extended Kalman Filter was evaluated similarly to the dead reckoning model. 
 
 \section{Conclusions and Future Work}
 
-The research conducted brought about functional systems for indoor localization through the development of the fingerprinting system, dead reckoning model, propagation model and extended Kalman filter. Each component was evaluated for accuracy. The fingerprinting system achieved a mean accuracy of 82.33\% $\pm$ 3.07\% with 95\% confidence. The dead reckoning model obtained a mean accuracy of 3.88m $\pm$ 0.37m with 95\% confidence. The propagation model had an accuracy of 5.91m $\pm$ 1.61m with 95\% confidence. The extended Kalman Filter with sensor fusion had an accuracy of 10.22m $\pm$ 0.91m with 95\% confidence As a future work, these systems would be improved upon so as to further increase their accuracies. Possible improvements include the implementation of a correlation algorithm for the fingerprinting system, such as Hidden Markov, and further work on the extended Kalman Filter. These systems would also be integrated into one single application, along with a line of sight detection module for deciding which system would be more accurate given the user’s current conditions. Analysis on power consumption of the application would also be beneficial future work.
+The research conducted brought about functional systems for indoor localization through the development of the fingerprinting system, dead reckoning model, propagation model and extended Kalman filter. Each component was evaluated for accuracy. The fingerprinting system achieved a mean accuracy of 82.33\% $\pm$ 3.07\% with 95\% confidence. The dead reckoning model obtained a mean accuracy of 3.88m $\pm$ 0.37m with 95\% confidence. The propagation model had an accuracy of 5.91m $\pm$ 1.61m with 95\% confidence. The extended Kalman Filter with sensor fusion had an accuracy of 10.22m $\pm$ 0.91m with 95\% confidence. The fingerprinting system proved to be a viable option for detecting users at room level accuracies. The extended Kalman filter proved to suffer from cumulative errors, but points to possible advantages of combining with the fingerprinting system for the sake of correcting estimations done by the Kalman filter. As a future work, these systems would be improved upon so as to further increase their accuracies. Possible improvements include the implementation of a correlation algorithm for the fingerprinting system, such as Hidden Markov, and further work on the extended Kalman filter. These systems would also be integrated into one single application for the sake collaboratively improving the overall accuracy, along with the implementation of a line of sight detection module for aid in deciding which system would be more accurate given the user’s current conditions.
+
 
 
 \section*{Acknowledgment}
